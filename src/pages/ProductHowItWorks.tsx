@@ -63,7 +63,7 @@ function ProductHowItWorks() {
                 <Box sx={number}>1.</Box>
                 <Box
                   component="img"
-                  src="/cores/images/productHowItWorks1.svg"
+                  src={`${process.env.PUBLIC_URL}/cores/images/productHowItWorks1.svg`}
                   alt="suitcase"
                   sx={image}
                 />
@@ -77,7 +77,7 @@ function ProductHowItWorks() {
                 <Box sx={number}>2.</Box>
                 <Box
                   component="img"
-                  src="/cores/images/productHowItWorks2.svg"
+                  src={`${process.env.PUBLIC_URL}/cores/images/productHowItWorks2.svg`}
                   alt="graph"
                   sx={image}
                 />
@@ -92,7 +92,7 @@ function ProductHowItWorks() {
                 <Box sx={number}>3.</Box>
                 <Box
                   component="img"
-                  src="/cores/images/productHowItWorks3.svg"
+                  src={`${process.env.PUBLIC_URL}/cores/images/productHowItWorks3.svg`}
                   alt="clock"
                   sx={image}
                 />

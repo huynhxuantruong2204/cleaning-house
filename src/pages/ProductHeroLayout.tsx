@@ -46,13 +46,8 @@ export default function ProductHeroLayout(
           flexDirection: "column",
           alignItems: "center",
         }}
+        className="md:h-full sm:h-72"
       >
-        <img
-          src="/static/themes/onepirate/productHeroWonder.png"
-          alt="wonder"
-          width="147"
-          height="80"
-        />
         {children}
         <Box
           sx={{
@@ -61,20 +56,10 @@ export default function ProductHeroLayout(
             right: 0,
             top: 0,
             bottom: 0,
-            backgroundColor: "common.black",
-            opacity: 0.5,
             zIndex: -1,
           }}
         />
         <Background sx={sxBackground} />
-        <Box
-          component="img"
-          src="/static/themes/onepirate/productHeroArrowDown.png"
-          height="16"
-          width="12"
-          alt="arrow down"
-          sx={{ position: "absolute", bottom: 32 }}
-        />
       </Container>
     </ProductHeroLayoutRoot>
   );
