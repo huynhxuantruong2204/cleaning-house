@@ -5,6 +5,7 @@ import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
 import Typography from "../components/Typography";
 import TextField from "../components/TextField";
+import moment from "moment";
 
 function Copyright() {
   return (
@@ -44,102 +45,22 @@ const LANGUAGES = [
 
 export default function AppFooter() {
   return (
-    <Typography
-      component="footer"
-      sx={{ display: "flex", bgcolor: "secondary.light" }}
-    >
-      <Container sx={{ my: 8, display: "flex" }}>
-        <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={3}>
-            <Grid
-              container
-              direction="column"
-              justifyContent="flex-end"
-              spacing={2}
-              sx={{ height: 120 }}
-            >
-              <Grid item sx={{ display: "flex" }}>
-                <Box component="a" href="https://mui.com/" sx={iconStyle}>
-                  <img
-                    src="/cores/images/appFooterFacebook.png"
-                    alt="Facebook"
-                  />
-                </Box>
-                <Box
-                  component="a"
-                  href="https://twitter.com/MUI_hq"
-                  sx={iconStyle}
-                >
-                  <img src="/cores/images/appFooterTwitter.png" alt="Twitter" />
-                </Box>
-              </Grid>
-              <Grid item>
-                <Copyright />
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={6} sm={4} md={2}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Legal
-            </Typography>
-            <Box component="ul" sx={{ m: 0, listStyle: "none", p: 0 }}>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/premium-themes/onepirate/terms/">Terms</Link>
-              </Box>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/premium-themes/onepirate/privacy/">Privacy</Link>
-              </Box>
-            </Box>
-          </Grid>
-          <Grid item xs={6} sm={8} md={4}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Language
-            </Typography>
-            <TextField
-              select
-              size="medium"
-              variant="standard"
-              SelectProps={{
-                native: true,
-              }}
-              sx={{ mt: 1, width: 150 }}
-            >
-              {LANGUAGES.map((language) => (
-                <option value={language.code} key={language.code}>
-                  {language.name}
-                </option>
-              ))}
-            </TextField>
-          </Grid>
-          <Grid item>
-            <Typography variant="caption">
-              {"Icons made by "}
-              <Link
-                href="https://www.freepik.com"
-                rel="sponsored"
-                title="Freepik"
-              >
-                Freepik
-              </Link>
-              {" from "}
-              <Link
-                href="https://www.flaticon.com"
-                rel="sponsored"
-                title="Flaticon"
-              >
-                www.flaticon.com
-              </Link>
-              {" is licensed by "}
-              <Link
-                href="https://creativecommons.org/licenses/by/3.0/"
-                title="Creative Commons BY 3.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CC 3.0 BY
-              </Link>
-            </Typography>
-          </Grid>
+    <Typography component="footer" sx={{ bgcolor: "secondary.light" }}>
+      <Container className="mt-8">
+        <Grid item md={12}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.2590507480213!2d109.2007489141432!3d13.763245500737932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f6cc77551bdd9%3A0xda3c6b6d86ae4dbb!2zNjAsIDkgxJAuIE5ndXnhu4VuIFh1w6JuIE5oxKksIFF1YW5nIFRydW5nLCBUaMOgbmggcGjhu5EgUXVpIE5oxqFuLCBCw6xuaCDEkOG7i25oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1656869631902!5m2!1svi!2s"
+            className="h-screen w-full"
+            loading="lazy"
+          ></iframe>
+        </Grid>
+        <Grid item md={12}>
+          <Typography className="py-3.5 text-left">
+            Copyright © {moment().format("YYYY")}
+            <Link href="#" underline="hover">
+              {" vesinhsachquynhon.com"}
+            </Link>
+          </Typography>
         </Grid>
       </Container>
     </Typography>

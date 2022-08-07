@@ -1,8 +1,9 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import AppBar from "../../components/AppBar/AppBar";
 import Toolbar from "../../components/ToolBar/ToolBar";
+import { Avatar, Typography } from "@mui/material";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 const rightLink = {
   fontSize: 16,
@@ -15,35 +16,26 @@ function AppAppBar() {
     <div>
       <AppBar position="fixed">
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Box sx={{ flex: 1 }} />
+          <Avatar
+            className="float-left h-4"
+            src={`${process.env.PUBLIC_URL}/cores/images/logo.jpg`}
+          />
           <Link
             variant="h6"
+            className="sm:text-base"
             underline="none"
             color="inherit"
-            href="/premium-themes/onepirate/"
-            sx={{ fontSize: 24 }}
+            href="#"
           >
-            {"onepirate"}
+            {"Vệ sinh công nghiệp Quy Nhơn"}
           </Link>
-          <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-            <Link
-              color="inherit"
-              variant="h6"
-              underline="none"
-              href="/premium-themes/onepirate/sign-in/"
-              sx={rightLink}
-            >
-              {"Sign In"}
+
+          <Typography component="p">
+            <Link href="tel:0386089003" style={{ color: "#FFF" }}>
+              <PhoneIcon />
+              Tel: 038 608 9003
             </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              href="/premium-themes/onepirate/sign-up/"
-              sx={{ ...rightLink, color: "secondary.main" }}
-            >
-              {"Sign Up"}
-            </Link>
-          </Box>
+          </Typography>
         </Toolbar>
       </AppBar>
       <Toolbar />

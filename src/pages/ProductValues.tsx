@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Typography from "../components/Typography";
+import CleaningServicesIcon from "@mui/icons-material/CleaningServices";
 
 const item: SxProps<Theme> = {
   display: "flex",
@@ -17,9 +18,13 @@ function ProductValues() {
   return (
     <Box
       component="section"
-      sx={{ display: "flex", overflow: "hidden", bgcolor: "secondary.light" }}
+      sx={{
+        display: "flex",
+        overflow: "hidden",
+        bgcolor: "secondary.light",
+      }}
     >
-      <Container sx={{ mt: 15, mb: 30, display: "flex", position: "relative" }}>
+      <Container sx={{ mt: 5, mb: 5, display: "flex", position: "relative" }}>
         <Box
           component="img"
           src="/cores/images/productCurvyLines.png"
@@ -31,20 +36,17 @@ function ProductValues() {
             <Box sx={item}>
               <Box
                 component="img"
-                src="/cores/images/productValues1.svg"
+                src={`${process.env.PUBLIC_URL}/cores/images/cleaning.svg`}
                 alt="suitcase"
                 sx={{ height: 55 }}
               />
+              {/* <CleaningServicesIcon fontSize="large" /> */}
               <Typography variant="h6" sx={{ my: 5 }}>
-                The best luxury hotels
+                Vệ sinh dọn dẹp
               </Typography>
               <Typography variant="h5">
-                {
-                  "From the latest trendy boutique hotel to the iconic palace with XXL pool"
-                }
-                {
-                  ", go for a mini-vacation just a few subway stops away from your home."
-                }
+                Khách sạn, nhà ở dân dụng, cơ quan công trình, trường học, quán
+                xá ...
               </Typography>
             </Box>
           </Grid>
@@ -52,18 +54,15 @@ function ProductValues() {
             <Box sx={item}>
               <Box
                 component="img"
-                src="/cores/images/productValues2.svg"
+                src={`${process.env.PUBLIC_URL}/cores/images/windown.svg`}
                 alt="graph"
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                New experiences
+                Dịch vụ lau kính
               </Typography>
               <Typography variant="h5">
-                {
-                  "Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… "
-                }
-                {"your Sundays will not be alike."}
+                Lau kính Show room, làm mới, đánh bóng gạch đá các loại
               </Typography>
             </Box>
           </Grid>
@@ -71,16 +70,16 @@ function ProductValues() {
             <Box sx={item}>
               <Box
                 component="img"
-                src="/cores/images/productValues3.svg"
+                src={`${process.env.PUBLIC_URL}/cores/images/industry.svg`}
                 alt="clock"
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                Exclusive rates
+                Vệ sinh công nghiệp
               </Typography>
               <Typography variant="h5">
-                {"By registering, you will access specially negotiated rates "}
-                {"that you will not find anywhere else."}
+                Cung cấp tạp vụ định kỳ, hóa chất, máy móc & dụng cụ trong ngành
+                vệ sinh công nghiệp.
               </Typography>
             </Box>
           </Grid>
